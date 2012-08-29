@@ -5,19 +5,36 @@ gem 'rails', '3.2.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby' , '1.2.5', :require => 'sqlite3'
+gem 'sqlite3'
 
 
-# Gems used only for assets and not required
 # in production environments by default.
+
 
 group :development do
  gem 'rspec-rails', '2.11'
+ gem 'guard-rspec'
+
 end
 
 group :test do
  gem 'rspec', '2.11'
+ gem 'spork-rails'
 end
+
+group :test, :development do
+gem 'ZenTest'
+gem 'autotest-rails-pure'
+gem 'autotest-growl'
+gem 'win32-process'
+gem 'selenium-webdriver', '2.25.0'
+gem 'xpath', '0.1.4'
+gem 'capybara','1.1.2'
+gem 'rb-fchange', '0.0.5'
+gem 'rb-notifu','0.0.4'
+gem 'win32console', '1.3.2'
+end
+
 
 
 group :assets do
